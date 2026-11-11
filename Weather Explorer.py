@@ -470,7 +470,7 @@ ctk.CTkLabel(
 make_button(welcome_frame, "ENTER", open_map).place(x=80, y=230)
 make_button(welcome_frame, "ABOUT", open_about,
             fg=PANEL_LIGHT, text_color=TEXT, font_size=16).place(x=80, y=290)
-# ---------------------- MAP SCREEN -------------------------
+#  MAP SCREEN
 map_frame = tk.Frame(window, bg="black")
 left_frame = tk.Frame(map_frame, bg="black")
 left_frame.pack(side="left", fill="both", expand=True)
@@ -485,7 +485,7 @@ map_widget.pack(fill="both", expand=True)
 map_widget.set_position(DEFAULT_LAT, DEFAULT_LON)
 map_widget.set_zoom(DEFAULT_ZOOM)
 map_widget.add_left_click_map_command(get_coords)
-# ---------------------- RIGHT PANEL ------------------------
+   # RIGHT PANEL
 tk.Label(
     right_frame, text="WEATHER DASHBOARD", fg=TEXT, bg=BG,
     font=(FONT_MAIN, 16, "bold"),
@@ -518,7 +518,7 @@ ctk.CTkButton(
     text_color=TEXT, border_width=1, border_color=BORDER,
     corner_radius=8, width=100, height=32, cursor="hand2",
 ).pack(side="left", padx=5)
-# ---------------------- CURRENT VIEW -----------------------
+   # CURRENT VIEW
 current_frame = tk.Frame(right_frame, bg=BG)
 hero_frame = tk.Frame(current_frame, bg=BG)
 hero_frame.place(x=-250, y=-100)
@@ -546,7 +546,7 @@ condition_card, condition_label = create_card(current_frame, CARD_START_Y + CARD
 clock_label = tk.Label(current_frame, text="--:--:--", fg=ACCENT, bg=BG,
                        font=(FONT_MAIN, 34, "bold"))
 clock_label.place_forget()
-# ---------------------- FORECAST VIEW ----------------------
+  # FORECAST VIEW 
 forecast_frame = tk.Frame(right_frame, bg=BG)
 tk.Label(forecast_frame, text="WEEKLY FORECAST", fg=TEXT, bg=BG,
          font=(FONT_MAIN, 16, "bold")).pack(pady=(20, 10))
@@ -572,7 +572,7 @@ ax.set_ylabel("°C", color="white")
 ax.grid(True, color="gray", linestyle="--", alpha=0.3)
 canvas = FigureCanvasTkAgg(fig, master=graph_frame)
 canvas.get_tk_widget().pack(fill="both", expand=True)
-# ---------------------- ABOUT ------------------------------
+   # ABOUT  
 about_frame = tk.Frame(window, bg="black")
 about_bg = tk.Frame(about_frame, bg="black")
 about_bg.place(relwidth=1, relheight=1)
