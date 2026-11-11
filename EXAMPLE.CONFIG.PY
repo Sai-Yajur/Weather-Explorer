@@ -1,0 +1,2 @@
+# example config key
+API_KEY = "ENTER YOUR OPENWEATHERMAP API KEY HERE"
